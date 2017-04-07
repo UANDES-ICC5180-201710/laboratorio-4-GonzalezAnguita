@@ -1,8 +1,8 @@
 FactoryGirl.define do
-  factory :course do
-    title "Algebra"
-    code "ICC3022"
-    quota "30"
-    teacher factory: :person
+  factory :course do |course|
+    course.title "Calculo"
+    course.code "ICC3022"
+    course.quota "30"
+    course.teacher factory: :teacher, strategy: :build
   end
 end
