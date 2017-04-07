@@ -1,5 +1,6 @@
 class Person < ApplicationRecord
   has_many :courses, through: :enrollments
+  has_many :grades
   
   validates :first_name, presence: true, length: {maximum: 30}
   validates :last_name, presence: true, length: {maximum: 30}
